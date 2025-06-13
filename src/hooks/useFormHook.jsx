@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 
 const useFormHook = (initialValue = {}) => {
 
-    const [Data, setData] = useState(initialValue);
+    const [data, setData] = useState(initialValue);
 
     const handlechange = (e) =>{
         const {name, value} = e.target;
         setData({
-            ...Data,
+            ...data,
             [name]:value
         })
     };
@@ -16,7 +16,7 @@ const useFormHook = (initialValue = {}) => {
         setData(initialValue)
     };
 
-  return {Data, handlechange, resetForm}
+  return {data, handlechange, resetForm}
 }
 
 export default useFormHook;

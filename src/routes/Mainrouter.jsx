@@ -6,13 +6,13 @@ import AddProduct from '../screen/AddProduct';
 
 const MainRouter = () => {
   return (
-  <>
-    <Routes>
-        <Route path='/' element= {<Home/>} />
-        <Route path='/productdetails' element= {<ProductDetails/>} />
-        <Route path='/addproduct' element= {<AddProduct/>} />
-    </Routes>
-  </>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/addproduct' element={<AddProduct />} />
+        <Route path='/details/:id' element={<ProductDetails />} />
+      </Routes>
+    </>
   )
 }
 

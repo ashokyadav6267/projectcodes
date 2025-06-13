@@ -8,6 +8,7 @@ const AddProduct = () => {
         <h1 className='text-blue-900 text-3xl font-bold ' >Add Your Product</h1>
         <AddProductForm />
       </div>
+      <h1 className='font-bold text-2xl text-red-900' > Add Product Page </h1>
     </>
   )
 }

@@ -1,5 +1,5 @@
-// import { useContext } from "react";
-// import { myContextProduct } from "../context/productContext";
+import { useContext } from "react";
+import { myContextProduct } from "../context/productContext";
 
 
-// export const useStoreHook =useContext(myContextProduct);
+export const useStoreHook =useContext(myContextProduct);
