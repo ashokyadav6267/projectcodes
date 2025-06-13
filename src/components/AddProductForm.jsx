@@ -13,7 +13,7 @@ const AddProductForm = () => {
     brand: "",
     description: "",
     color: "",
-    price: 0,
+    price: "",
     imageUrl: "",
   });
 

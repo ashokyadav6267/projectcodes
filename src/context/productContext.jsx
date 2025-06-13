@@ -27,8 +27,6 @@ const MyProductContext = (props) => {
     localStorage.setItem("pro",JSON.stringify(Product))
   }, [Product] )
 
-  console.log(Product)
-
   return (
     <>
       <myContextProduct.Provider value={{ Product, setProduct, AddProduct }} >
