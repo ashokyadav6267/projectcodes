@@ -2,10 +2,12 @@ import { useContext, useState } from 'react'
 import useFormHook from '../hooks/useFormHook';
 import { myContextProduct } from '../context/productContext';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router';
 
 const AddProductForm = () => {
 
   const { AddProduct } = useContext(myContextProduct)
+  const navigate = useNavigate();
 
   const { data, handlechange, resetForm } = useFormHook({
     productName: "",
@@ -22,24 +24,25 @@ const AddProductForm = () => {
     AddProduct(data);
     toast.success("Product Add successfully")
     resetForm();
+    navigate("/product")
   }
 
   return (
     <>
       <div>
-        <form className='p-10 w-240 flex flex-col items-center justify-center bg-gray-300 ' onSubmit={handlesubmit} >
+        <form className='p-10 w-240 flex flex-col items-center justify-center text-white ' onSubmit={handlesubmit} >
           <div className='flex flex-col'>
             <label className='text-2xl' htmlFor="ProductName">Product Name</label>
             <input
               id='ProductName'
               name='productName'
-              className='border-2 border-blue-900 w-200 h-15 p-5 rounded-lg mt-4'
+              className='border-2 border-blue-900 w-200 text-white h-15 p-5 rounded-lg mt-4'
               type="text"
               onChange={handlechange}
               value={data.productName}
               placeholder='product name' />
           </div>
-           <div className='flex flex-col'>
+          <div className='flex flex-col'>
             <label className='text-2xl' htmlFor="id">id</label>
             <input
               id='id'

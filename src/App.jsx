@@ -4,9 +4,9 @@ import MainRouter from './routes/Mainrouter';
 
 const App = () => {
   return (
-    <div>
-    <NavBar/>
-    <MainRouter/>
+    <div className='bg-black' >
+      <NavBar />
+      <MainRouter />
     </div>
   )
 }
